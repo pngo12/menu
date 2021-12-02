@@ -1,0 +1,33 @@
+
+body {
+    min-height: 100%;
+    overflow: auto;
+    background-color: #D9D4CA;
+    font-family: 'Outfit',
+        sans-serif;
+}
+
+li {
+    margin: 1rem !important;
+}
+
+.alternativeItems {
+    display: none;
+}
+
+.alternativeItemsShow {
+    display: show;
+}
+
+.defaultItemHide {
+    display: none;
+}
+
+.modal-background {
+    background-color: #fff;
+}
+
+.hideModal {
+    opacity: 0;
+    transition: opacity 400ms;
+}

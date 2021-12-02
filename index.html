@@ -1,0 +1,86 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <script src="index.js"></script>
+
+    <title>PNgo</title>
+</head>
+
+<body id="blur">
+    <div class="container">
+        <div class="columns is-centered is-flex is-align-content-center">
+            <div class="column is-2 is-4-mobile">
+                <img src="./assets/pngonori.svg" class="mt-6 defaultItem">
+                <img src="./assets/pngogrille.svg" class="mt-6 alternativeItems">
+            </div>
+        </div>
+        <div class="column">
+            <p class="title has-text-centered">Food</p>
+            <ul class="has-text-centered defaultItem">
+                <li class="is-size-4">Shishito Peppers</li>
+                <li class="is-size-4">Tuna Handroll</li>
+                <li class="is-size-4">Salmon Handroll</li>
+                <li class="is-size-4">Yellowtail Handroll</li>
+                <li class="is-size-4">Seared Tuna Handroll</li>
+            </ul>
+            <ul class="is-size-4 has-text-centered alternativeItems">
+                <li>Shishito Peppers</li>
+                <li>Australian Wagyu</li>
+            </ul>
+        </div>
+        <div clas="column mb-6">
+
+            <div class="modal is-active" id="modal">
+                <div class="modal-background"></div>
+                <div class="modal-content">
+                    <div class="container">
+                        <div class="columns is-mobile">
+                            <div class="column is-centered is-10-mobile ml-4">
+                                <p class="title">What is Your Name?</p>
+                                <div class="control">
+                                    <input class="input" id="name" type="text" placeholder="First Name">
+                                    <p class="is-hidden" id="error">Sorry you're not on the list.</p>
+                                    <button class="button is-info mt-4" onclick="submitName()">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="title has-text-centered">Drinks</p>
+            <ul class="has-text-centered">
+                <li>
+                    <p class="is-size-4">Yuzu Sour</p>
+                    <p class="is-size-4 has-text-weight-light">Scotch Whiskey, Yuzu Juice, Egg Whites, Bitters</p>
+                </li>
+                <li>
+                    <p class="is-size-4">The London</p>
+                    <p class="is-size-4 has-text-weight-light">Dry Gin, Vermouth, Lemon, Blackberries, Rosé</p>
+                </li>
+                <li>
+                    <p class="is-size-4">Blueberry Old Fashioned</p>
+                    <p class="is-size-4 has-text-weight-light">Bourbon, Blueberries, Bitters</p>
+                </li>
+                <li>
+                    <p class="is-size-4">Matcha Whiskey Tea</p>
+                    <p class="is-size-4 has-text-weight-light">Scotch Whiskey, Lemon Juice, Honey, Matcha Tea</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>
