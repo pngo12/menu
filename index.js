@@ -13,11 +13,10 @@ const allowedGuests = new Set([
 
 const submitName = () => {
   const name = document.getElementById("name").value.toLowerCase();
-  const isLlama = checkForLlama(name);
 
   const validName = checkForValidName(name);
 
-  if (validName && isLlama) {
+  if (validName && checkForLlama(name)) {
     const hideDefaults = document.querySelectorAll(".defaultItem");
     const showAlternatives = document.querySelectorAll(".alternativeItems");
 
@@ -27,6 +26,9 @@ const submitName = () => {
       showAlternatives[i].classList.add("alternativeItemsShow");
     }
     fadeOut();
+  } else if (validName && checkForRosanna(name)) {
+      document.body.style.background = "#d9dbf1";
+      fadeOut();
   } else if (validName) {
     fadeOut();
   } else {
@@ -39,6 +41,12 @@ const checkForLlama = (name) => {
     return true;
   } else return false;
 };
+
+const checkForRosanna = name => {
+    if (name === "rosanna") {
+        return true;
+    } else return false;
+}
 
 const fadeOut = () => {
   const modal = document.getElementById("modal");
