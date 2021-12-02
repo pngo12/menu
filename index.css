@@ -11,16 +11,12 @@ li {
     margin: 1rem !important;
 }
 
-.alternativeItems {
+.hide {
     display: none;
 }
 
-.alternativeItemsShow {
-    display: show;
-}
-
-.defaultItemHide {
-    display: none;
+.show {
+    display: show
 }
 
 .modal-background {
@@ -29,5 +25,5 @@ li {
 
 .hideModal {
     opacity: 0;
-    transition: opacity 400ms;
+    transition: opacity 600ms;
 }

@@ -17,18 +17,18 @@ const submitName = () => {
   const validName = checkForValidName(name);
 
   if (validName && checkForLlama(name)) {
-    const hideDefaults = document.querySelectorAll(".defaultItem");
-    const showAlternatives = document.querySelectorAll(".alternativeItems");
+    const hideDefaults = document.querySelectorAll(".show");
+    const showAlternatives = document.querySelectorAll(".hide");
 
     for (let i = 0; i < hideDefaults.length; i++) {
-      hideDefaults[i].classList.add("defaultItemHide");
-      showAlternatives[i].classList.remove("alternativeItems");
-      showAlternatives[i].classList.add("alternativeItemsShow");
+      hideDefaults[i].classList.add("hide");
+      showAlternatives[i].classList.remove("hide");
+      showAlternatives[i].classList.add("show");
     }
     fadeOut();
   } else if (validName && checkForRosanna(name)) {
-      document.body.style.background = "#d9dbf1";
-      fadeOut();
+    document.body.style.background = "#d9dbf1";
+    fadeOut();
   } else if (validName) {
     fadeOut();
   } else {
@@ -42,14 +42,14 @@ const checkForLlama = (name) => {
   } else return false;
 };
 
-const checkForRosanna = name => {
-    if (name === "rosanna") {
-        return true;
-    } else return false;
-}
+const checkForRosanna = (name) => {
+  if (name === "rosanna") {
+    return true;
+  } else return false;
+};
 
 const fadeOut = () => {
-  const modal = document.getElementById("modal");
+  const modal = document.getElementById("nameModal");
   modal.classList.add("hideModal");
   modal.classList.remove("show");
 };
@@ -59,10 +59,10 @@ const checkForValidName = (name) => {
 };
 
 const showErrorMessage = () => {
-    const input = document.getElementById("name");
-    const paragraph = document.getElementById("error");
+  const input = document.getElementById("name");
+  const paragraph = document.getElementById("error");
 
-    input.classList.add("is-danger");
-    paragraph.classList.remove("is-hidden");
-    paragraph.classList.add("has-text-danger");
+  input.classList.add("is-danger");
+  paragraph.classList.remove("is-hidden");
+  paragraph.classList.add("has-text-danger");
 };
