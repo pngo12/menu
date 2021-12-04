@@ -36,6 +36,10 @@ const submitName = () => {
   }
 };
 
+const checkForValidName = (name) => {
+  return allowedGuests.has(name);
+};
+
 const checkForLlama = (name) => {
   if (name === "llama") {
     return true;
@@ -54,15 +58,11 @@ const fadeOut = () => {
   modal.classList.remove("show");
 };
 
-const checkForValidName = (name) => {
-  return allowedGuests.has(name);
-};
-
 const showErrorMessage = () => {
   const input = document.getElementById("name");
   const paragraph = document.getElementById("error");
 
-  input.classList.add("is-danger");
-  paragraph.classList.remove("is-hidden");
+  paragraph.classList.remove("hide");
   paragraph.classList.add("has-text-danger");
+  input.classList.add("is-danger");
 };
